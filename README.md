@@ -12,4 +12,5 @@ Example
           createdCallback: (controller) async {
             await controller.play('rtsp://xxx.xxx.xx.xxx:8554/test'); // Put your link to stream
           },
-        ),`
+        ),
+        `
