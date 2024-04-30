@@ -1,0 +1,20 @@
+                    -HC:\Users\medvedev.MECARO\Desktop\flutter_rtsp_ffmpeg-master\android
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_SYSTEM_VERSION=16
+-DANDROID_PLATFORM=android-16
+-DANDROID_ABI=arm64-v8a
+-DCMAKE_ANDROID_ARCH_ABI=arm64-v8a
+-DANDROID_NDK=C:\Users\medvedev.MECARO\AppData\Local\Android\sdk\ndk\23.1.7779620
+-DCMAKE_ANDROID_NDK=C:\Users\medvedev.MECARO\AppData\Local\Android\sdk\ndk\23.1.7779620
+-DCMAKE_TOOLCHAIN_FILE=C:\Users\medvedev.MECARO\AppData\Local\Android\sdk\ndk\23.1.7779620\build\cmake\android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=C:\Users\medvedev.MECARO\AppData\Local\Android\sdk\cmake\3.18.1\bin\ninja.exe
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\medvedev.MECARO\Desktop\flutter_rtsp_ffmpeg-master\example\build\rtsp_ffmpeg\intermediates\cxx\RelWithDebInfo\43w5m1m2\obj\arm64-v8a
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=C:\Users\medvedev.MECARO\Desktop\flutter_rtsp_ffmpeg-master\example\build\rtsp_ffmpeg\intermediates\cxx\RelWithDebInfo\43w5m1m2\obj\arm64-v8a
+-DCMAKE_BUILD_TYPE=RelWithDebInfo
+-BC:\Users\medvedev.MECARO\Desktop\flutter_rtsp_ffmpeg-master\android\.cxx\RelWithDebInfo\43w5m1m2\arm64-v8a
+-GNinja
+-DANDROID_ARM_NEON=TRUE
+-DANDROID_STL=c++_shared
+                    Build command args: []
+                    Version: 2

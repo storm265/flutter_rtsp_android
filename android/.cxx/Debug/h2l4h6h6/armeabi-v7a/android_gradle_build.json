@@ -1,0 +1,44 @@
+{
+  "buildFiles": [
+    "C:\\Users\\medvedev.MECARO\\Desktop\\flutter_rtsp_ffmpeg-master\\android\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\medvedev.MECARO\\AppData\\Local\\Android\\sdk\\cmake\\3.18.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\medvedev.MECARO\\Desktop\\flutter_rtsp_ffmpeg-master\\android\\.cxx\\Debug\\h2l4h6h6\\armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\medvedev.MECARO\\AppData\\Local\\Android\\sdk\\cmake\\3.18.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\medvedev.MECARO\\Desktop\\flutter_rtsp_ffmpeg-master\\android\\.cxx\\Debug\\h2l4h6h6\\armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "rtsp::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "armeabi-v7a",
+      "artifactName": "rtsp",
+      "output": "C:\\Users\\medvedev.MECARO\\Desktop\\flutter_rtsp_ffmpeg-master\\example\\build\\rtsp_ffmpeg\\intermediates\\cxx\\Debug\\h2l4h6h6\\obj\\armeabi-v7a\\librtsp.so",
+      "runtimeFiles": [
+        "C:\\Users\\medvedev.MECARO\\Desktop\\flutter_rtsp_ffmpeg-master\\android\\src\\main\\jniLibs\\armeabi-v7a\\libavcodec.so",
+        "C:\\Users\\medvedev.MECARO\\Desktop\\flutter_rtsp_ffmpeg-master\\android\\src\\main\\jniLibs\\armeabi-v7a\\libavformat.so",
+        "C:\\Users\\medvedev.MECARO\\Desktop\\flutter_rtsp_ffmpeg-master\\android\\src\\main\\jniLibs\\armeabi-v7a\\libavutil.so",
+        "C:\\Users\\medvedev.MECARO\\Desktop\\flutter_rtsp_ffmpeg-master\\android\\src\\main\\jniLibs\\armeabi-v7a\\libswresample.so",
+        "C:\\Users\\medvedev.MECARO\\Desktop\\flutter_rtsp_ffmpeg-master\\android\\src\\main\\jniLibs\\armeabi-v7a\\libswscale.so"
+      ]
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "C:\\Users\\medvedev.MECARO\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
+      "cppCompilerExecutable": "C:\\Users\\medvedev.MECARO\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

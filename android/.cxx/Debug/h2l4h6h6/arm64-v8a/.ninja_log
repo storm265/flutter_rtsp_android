@@ -1,0 +1,4 @@
+# ninja log v5
+0	1667	731424197	CMakeFiles/rtsp.dir/src/main/cpp/native-lib.cpp.o	d03ed64eb26f6533
+1669	1773	731424197	C:/Users/medvedev.MECARO/Desktop/flutter_rtsp_ffmpeg-master/example/build/rtsp_ffmpeg/intermediates/cxx/Debug/h2l4h6h6/obj/arm64-v8a/librtsp.so	6206df8b6642d040
+2	105	734355848	C:/Users/medvedev.MECARO/Desktop/flutter_rtsp_ffmpeg-master/example/build/rtsp_ffmpeg/intermediates/cxx/Debug/h2l4h6h6/obj/arm64-v8a/librtsp.so	6206df8b6642d040
