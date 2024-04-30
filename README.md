@@ -9,10 +9,14 @@ An FFMPEG based RTSP player flutter plugin. This support Almost real time RTSP p
 
 Example
 `
-RtspFFMpeg(
-          createdCallback: (controller) async 
-          {
-            await controller.play('rtsp://xxx.xxx.xx.xxx:8554/test'); // Put your link to stream
+Scaffold(
+        appBar: AppBar(
+          title: const Text('Plugin example app'),
+        ),
+        body: RtspFFMpeg(
+          createdCallback: (controller) async {
+            await controller.play('rtsp://192.168.65.122:8554/test');
           },
         ),
+      ),
 `
