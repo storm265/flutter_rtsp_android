@@ -8,8 +8,8 @@ An FFMPEG based RTSP player flutter plugin. This support Almost real time RTSP p
 Example:
 
 
-Add to your project:
-`dependencies:
+#### # Add to your project:
+```dependencies:
   flutter:
     sdk: flutter
 
@@ -17,20 +17,21 @@ Add to your project:
   rtsp_ffmpeg:
     git: 
       url: https://github.com/keodoff/flutter_rtsp_android.git
-      ref: main`
+      ref: main
+	 ```
       
 
 
-`Scaffold(
+```Scaffold(
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
         body: RtspFFMpeg(
           createdCallback: (controller) async {
-            await controller.play('rtsp://192.168.65.122:8554/test');
+            await controller.play('rtsp://xxx.xxx.xx.xxx:8554/test'); //Put your rtsp
           },
         ),
       ),
-	  `
+	  ```
 	  
 	  
