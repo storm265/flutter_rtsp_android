@@ -1,0 +1,3 @@
+C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_ffmpeg-master/flutter_rtsp_android/android/.cxx/Debug/i2j3d475/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_ffmpeg-master/flutter_rtsp_android/android/.cxx/Debug/i2j3d475/arm64-v8a/CMakeFiles/rtsp.dir
+C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_ffmpeg-master/flutter_rtsp_android/android/.cxx/Debug/i2j3d475/arm64-v8a/CMakeFiles/rebuild_cache.dir

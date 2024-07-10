@@ -1,10 +1,13 @@
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class RtspController {
+final rtspController = RtspController(0);
+
+final class RtspController {
   RtspController(int id) {
     _channel = MethodChannel('rtsp_ffmpeg$id');
   }
@@ -45,6 +48,7 @@ class _RtspFFMpegState extends State<RtspFFMpeg> {
   }
 
   void _onPlatformViewCreated(int id) {
-    widget.createdCallback(RtspController(id));
+    log('id ${id}');
+    widget.createdCallback(rtspController);
   }
 }

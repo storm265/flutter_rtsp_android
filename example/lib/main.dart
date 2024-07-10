@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:rtsp_ffmpeg/rtsp_ffmpeg.dart';
 
@@ -11,6 +13,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  late RtspController rtspController;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,10 +21,14 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: RtspFFMpeg(
-          createdCallback: (controller) async {
-            await controller.play('rtsp://192.168.65.122:8554/test');
-          },
+        body: GestureDetector(
+          child: RtspFFMpeg(
+            createdCallback: (controller) async {
+              await controller
+                  .play('rtsp://192.168.65.122:8554/operator/h264/720p');
+              // await controller.play('rtsp://192.168.65.122:8554/test');
+            },
+          ),
         ),
       ),
     );
