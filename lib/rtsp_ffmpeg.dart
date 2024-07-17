@@ -8,19 +8,47 @@ import 'package:flutter/services.dart';
 final rtspController = RtspController(0);
 
 final class RtspController {
+  static const watchdogPeriod = Duration(milliseconds: 200);
+
   RtspController(int id) {
     _channel = MethodChannel('rtsp_ffmpeg$id');
   }
 
   late MethodChannel _channel;
 
+  // TODO: maybe./ /.;''
+  //  >add Stream for this variable as well
+  bool _isStreamAlive = false;
+
+  late Future<void> _watchdog;
+
   Future<dynamic> play(String url) async {
-    return await _channel.invokeMethod('play', url);
+    _isStreamAlive = true;
+    final playFuture = _channel.invokeMethod('play', url);
+
+    _watchdog = Future.doWhile(() async {
+       await Future.delayed(watchdogPeriod);
+       return await _channel.invokeMethod<bool>('isStreamAlive') ?? false;
+    }).whenComplete(() => _isStreamAlive = false);
+
+    return playFuture;
   }
 
   Future<dynamic> stop() async {
     return await _channel.invokeMethod('stop');
   }
+
+  bool get isStreamAlive => _isStreamAlive;
+
+// bool isStreamAlive() {
+//
+//   bool isStreamAlive = false;
+//   _channel.invokeMethod<bool>('isStreamAlive')
+//       .whenComplete((bool alive) => isStreamAlive = alive)
+//       .timeout(const Duration(milliseconds: 1));
+//
+//   return isStreamAlive;
+// }
 }
 
 typedef RtspFFMpegCreatedCallback = void Function(RtspController controller);

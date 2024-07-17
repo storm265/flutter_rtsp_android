@@ -47,6 +47,7 @@ class FFMpegView internal constructor(context: Context?, messenger: BinaryMessen
         when(call.method) {
             "play" -> onPlay(call.arguments as String, result)
             "stop" -> onStop(result)
+            "isStreamAlive" -> getIsAlive(result)
             else -> result.notImplemented()
         }
     }
@@ -63,5 +64,9 @@ class FFMpegView internal constructor(context: Context?, messenger: BinaryMessen
         }else{
             result.error("$res", "Error opening URL", "Error opening url")
         }
+    }
+
+    private fun getIsAlive(result: MethodChannel.Result) {
+        result.success(rtspClient.isStreamAlive())
     }
 }

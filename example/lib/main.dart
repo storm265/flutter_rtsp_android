@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -14,6 +15,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   late RtspController rtspController;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,8 +26,11 @@ class _MyAppState extends State<MyApp> {
         body: GestureDetector(
           child: RtspFFMpeg(
             createdCallback: (controller) async {
-              await controller
-                  .play('rtsp://192.168.65.122:8554/operator/h264/720p');
+              final streamWatchdogPrinter = Timer.periodic(
+                  const Duration(milliseconds: 100), (timer) =>
+                  print("Stream is alive: ${controller.isStreamAlive}")
+              );
+              await controller.play('rtsp://192.168.0.40:8554/test');
               // await controller.play('rtsp://192.168.65.122:8554/test');
             },
           ),

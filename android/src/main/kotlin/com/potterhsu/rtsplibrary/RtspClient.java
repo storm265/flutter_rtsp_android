@@ -30,4 +30,5 @@ public class RtspClient {
     public native void setHolder(Surface holder, int width, int height);
     public native void stop();
     public native void dispose();
+    public native boolean isStreamAlive();
 }
