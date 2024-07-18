@@ -32,8 +32,9 @@ bool isStop = true;
 void callback(JNIEnv *env, uint8_t *buf, int channel, int width, int height);
 
 void *playBackThread(RtspStreamContext play_context) {
-    isStop = false;
+    isStop = true;
 
+    int err;
     SwsContext *img_convert_ctx;
     AVFormatContext *context = avformat_alloc_context();
     AVCodecContext *ccontext = avcodec_alloc_context3(NULL);
@@ -58,8 +59,10 @@ void *playBackThread(RtspStreamContext play_context) {
 
     // Open RTSP
 //    char *rtspUrl = static_cast<char *>(args);
+    __android_log_print(ANDROID_LOG_INFO, TAG, "RTSP URL %s", play_context.rtspUrl);
+
     char *rtspUrl = play_context.rtspUrl;
-    if (int err = avformat_open_input(&context, rtspUrl, NULL, nullptr) != 0) {
+    if (err = avformat_open_input(&context, rtspUrl, NULL, nullptr)) {
         isStop = true;
         __android_log_print(ANDROID_LOG_ERROR, TAG, "Cannot open input %s, error : %s", rtspUrl,
                             av_err2str(err));
@@ -67,6 +70,8 @@ void *playBackThread(RtspStreamContext play_context) {
         return (void *) JNI_ERR;
     }
     free(rtspUrl);
+    // Because avformat_open_input can crush
+    isStop = false;
 
     //av_dict_free(&option);
 

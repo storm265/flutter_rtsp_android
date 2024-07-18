@@ -39,16 +39,6 @@ final class RtspController {
   }
 
   bool get isStreamAlive => _isStreamAlive;
-
-// bool isStreamAlive() {
-//
-//   bool isStreamAlive = false;
-//   _channel.invokeMethod<bool>('isStreamAlive')
-//       .whenComplete((bool alive) => isStreamAlive = alive)
-//       .timeout(const Duration(milliseconds: 1));
-//
-//   return isStreamAlive;
-// }
 }
 
 typedef RtspFFMpegCreatedCallback = void Function(RtspController controller);
