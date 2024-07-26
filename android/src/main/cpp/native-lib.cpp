@@ -14,9 +14,51 @@ extern "C" {
 #include <libavformat/avformat.h>
 #include <libswscale/swscale.h>
 #include <pthread.h>
+#include <signal.h>
 }
 
 const char *TAG = __FILE__;
+
+/// @brief Represents a thread synchronization event that, when signaled,
+/// must be reset manually
+class ManualResetEvent {
+public:
+    explicit ManualResetEvent(bool signaled = false) : signaled_(signaled) {}
+
+    /// @brief Sets the state of the event to signaled, allowing one or more waiting
+    /// threads to proceed
+    void set() {
+        signaled_ = true;
+        // Notify all because until the event is manually
+        // reset, all waiters should be able to see event signalling
+        cv_.notify_all();
+    }
+
+    /// @brief Sets the state of the event to nonsignaled, causing threads to block
+    void reset() {
+        signaled_ = false;
+        cv_.notify_all();
+    }
+
+    /// @brief Blocks the current thread until the current WaitHandle receives a signal
+    void waitOne() {
+        std::unique_lock <std::mutex> lock(mutex_);
+        while (!signaled_) {
+            cv_.wait(lock);
+        }
+    }
+
+    template<class TRep, class TPeriod>
+    std::cv_status waitOne(std::chrono::duration <TRep, TPeriod> duration) {
+        std::unique_lock <std::mutex> lock(mutex_);
+        return cv_.wait_for(lock, duration);
+    }
+
+private:
+    std::mutex mutex_;
+    std::condition_variable cv_;
+    std::atomic<bool> signaled_;
+};
 
 struct RtspStreamContext {
     char *rtspUrl;
@@ -27,12 +69,15 @@ ANativeWindow *aNativeWindow;
 jmethodID gCallbackMethodId;
 std::unique_ptr <std::thread> activeThread;
 
-bool isStop = true;
+std::atomic<bool> isStop{true};
+ManualResetEvent successStop{false};
+//std::atomic<bool> successStop{false};
 
 void callback(JNIEnv *env, uint8_t *buf, int channel, int width, int height);
 
 void *playBackThread(RtspStreamContext play_context) {
     isStop = true;
+    successStop.reset();
 
     int err;
     SwsContext *img_convert_ctx;
@@ -172,6 +217,8 @@ void *playBackThread(RtspStreamContext play_context) {
         av_init_packet(&packet);
     }
 
+    __android_log_print(ANDROID_LOG_INFO, TAG, "Freeing stream resources");
+
     av_free(pic);
     av_free(picrgb);
     av_free(picture_buf);
@@ -183,9 +230,22 @@ void *playBackThread(RtspStreamContext play_context) {
     avformat_close_input(&context);
 
     isStop = true;
+    successStop.set();
     __android_log_print(ANDROID_LOG_INFO, TAG, "Stream is finished executing");
 
     return (void *) (isStop ? JNI_OK : JNI_ERR);
+}
+
+static void stopThread() {
+    isStop = true;
+    if (activeThread != nullptr) {
+        if (successStop.waitOne(std::chrono::milliseconds{100}) == std::cv_status::timeout) {
+            __android_log_print(ANDROID_LOG_ERROR, TAG,
+                                "Streaming thread didn't stop properly");
+            activeThread->detach();
+        }
+    }
+    activeThread = nullptr;
 }
 
 extern "C"
@@ -214,7 +274,9 @@ Java_com_potterhsu_rtsplibrary_RtspClient_play(
     char *copyUrl = (char *) malloc(sizeof(char) * strlen(rtspUrl));
     env->ReleaseStringUTFChars(endpoint, rtspUrl);
     strcpy(copyUrl, rtspUrl);
-//    activeThread = std::make_unique<std::thread>(playBackThread, (void *) copyUrl);
+    if (activeThread != nullptr) {
+        stopThread();
+    }
     activeThread = std::make_unique<std::thread>(playBackThread, RtspStreamContext{copyUrl});
     return JNI_OK;
 }
@@ -224,9 +286,7 @@ void
 Java_com_potterhsu_rtsplibrary_RtspClient_stop(
         JNIEnv *env,
         jobject) {
-    isStop = true;
-    activeThread->join();
-    activeThread = nullptr;
+    stopThread();
 }
 
 extern "C"

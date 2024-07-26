@@ -8,7 +8,8 @@ import 'package:flutter/services.dart';
 final rtspController = RtspController(0);
 
 final class RtspController {
-  static const watchdogPeriod = Duration(milliseconds: 200);
+  static const watchdogPeriod = Duration(milliseconds: 100);
+  static const nativeCallTimeout = Duration(milliseconds: 500);
 
   RtspController(int id) {
     _channel = MethodChannel('rtsp_ffmpeg$id');
@@ -16,26 +17,53 @@ final class RtspController {
 
   late MethodChannel _channel;
 
-  // TODO: maybe./ /.;''
-  //  >add Stream for this variable as well
+  StreamController<bool> _streamAliveController = StreamController<bool>();
+
+  Stream<bool> get streamAliveWatcher => _streamAliveController.stream;
+
   bool _isStreamAlive = false;
+  bool _started = false;
 
-  late Future<void> _watchdog;
+  late Future<void> _watchdog = Future.value();
 
-  Future<dynamic> play(String url) async {
-    _isStreamAlive = true;
+  Future<bool> play(String url) async {
+    var success = true;
+    _setStreamAlive(true);
+    _started = false;
     final playFuture = _channel.invokeMethod('play', url);
 
+    _watchdog.ignore();
     _watchdog = Future.doWhile(() async {
-       await Future.delayed(watchdogPeriod);
-       return await _channel.invokeMethod<bool>('isStreamAlive') ?? false;
-    }).whenComplete(() => _isStreamAlive = false);
+      if (!_started) {
+        await Future.delayed(const Duration(seconds: 1));
+        _started = true;
+      } else {
+        await Future.delayed(watchdogPeriod);
+      }
+      return await _channel.invokeMethod<bool>('isStreamAlive') ?? false;
+    }).whenComplete(() => _setStreamAlive(false));
 
-    return playFuture;
+    await playFuture.timeout(nativeCallTimeout,
+        onTimeout: () => success = false);
+
+    return success;
   }
 
-  Future<dynamic> stop() async {
-    return await _channel.invokeMethod('stop');
+  Future<bool> stop() async {
+    var success = true;
+    await _channel
+        .invokeMethod('stop')
+        .timeout(nativeCallTimeout, onTimeout: () => success = false);
+    return success;
+  }
+
+  void _setStreamAlive(bool newStatus) {
+    if (_isStreamAlive == newStatus) {
+      return;
+    }
+
+    _isStreamAlive = newStatus;
+    _streamAliveController.add(_isStreamAlive);
   }
 
   bool get isStreamAlive => _isStreamAlive;

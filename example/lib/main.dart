@@ -15,6 +15,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   late RtspController rtspController;
+  int counter = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -27,14 +28,29 @@ class _MyAppState extends State<MyApp> {
           child: RtspFFMpeg(
             createdCallback: (controller) async {
               final streamWatchdogPrinter = Timer.periodic(
-                  const Duration(milliseconds: 100), (timer) =>
-                  print("Stream is alive: ${controller.isStreamAlive}")
-              );
-              await controller.play('rtsp://192.168.0.40:8554/test');
+                  const Duration(milliseconds: 100),
+                  (timer) =>
+                      print("Stream is alive: ${controller.isStreamAlive}"));
+
+              final rtsp = 'rtsp://10.110.11.29:8554/test';
+              await controller.play(rtsp);
+              controller.streamAliveWatcher.listen((bool alive) async {
+                if (alive) {
+                  print("Stream is alive again");
+                } else {
+                  print("Stream is dead. Restarting...");
+                  await controller.stop();
+                  await controller.play(rtsp);
+                }
+              });
+
               // await controller.play('rtsp://192.168.65.122:8554/test');
             },
           ),
         ),
+          bottomSheet: TextButton(child: Text("PRESS COUNTER $counter"), onPressed: () {setState(() {
+            ++counter;
+          });})
       ),
     );
   }
