@@ -213,20 +213,21 @@ void *playBackThread(RtspStreamContext play_context) {
             }
             //callback(env, picture_buf2, 3, ccontext->width, ccontext->height);
         }
-        av_free_packet(&packet);
+        av_packet_unref(&packet);
         av_init_packet(&packet);
     }
 
     __android_log_print(ANDROID_LOG_INFO, TAG, "Freeing stream resources");
 
-    av_free(pic);
-    av_free(picrgb);
-    av_free(picture_buf);
-    av_free(picture_buf2);
+    isStop = true; 
+    successStop.set(); 
 
-    av_read_pause(context);
-    avio_close(oc->pb);
-    avformat_free_context(oc);
+    sws_freeContext(img_convert_ctx); 
+    av_frame_free(&pic);
+    av_frame_free(&picrgb);
+    av_freep(&picture_buf);
+    av_freep(&picture_buf2);
+    avcodec_free_context(&ccontext);
     avformat_close_input(&context);
 
     isStop = true;
