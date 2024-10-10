@@ -230,8 +230,6 @@ void *playBackThread(RtspStreamContext play_context) {
     avcodec_free_context(&ccontext);
     avformat_close_input(&context);
 
-    isStop = true;
-    successStop.set();
     __android_log_print(ANDROID_LOG_INFO, TAG, "Stream is finished executing");
 
     return (void *) (isStop ? JNI_OK : JNI_ERR);
