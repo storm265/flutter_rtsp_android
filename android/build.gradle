@@ -25,7 +25,6 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace 'com.xcellapps.flutter.rtsp_ffmpeg'
     compileSdkVersion 28
 
     sourceSets {

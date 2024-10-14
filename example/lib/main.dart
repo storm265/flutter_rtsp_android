@@ -15,7 +15,6 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   late RtspController rtspController;
-  int counter = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +47,6 @@ class _MyAppState extends State<MyApp> {
             },
           ),
         ),
-          bottomSheet: TextButton(child: Text("PRESS COUNTER $counter"), onPressed: () {setState(() {
-            ++counter;
-          });})
       ),
     );
   }
