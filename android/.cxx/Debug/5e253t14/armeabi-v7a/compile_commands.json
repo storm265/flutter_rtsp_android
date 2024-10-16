@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/Debug/5e253t14/armeabi-v7a",
+  "command": "C:\\Users\\Dwight_Schrute\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi19 --sysroot=C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Drtsp_EXPORTS -I../../../../src/main/cpp/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles\\rtsp.dir\\src\\main\\cpp\\native-lib.cpp.o -c C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\src\\main\\cpp\\native-lib.cpp",
+  "file": "C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/src/main/cpp/native-lib.cpp"
+}
+]
