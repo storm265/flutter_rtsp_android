@@ -1,0 +1,121 @@
+CMake Warning at C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android-legacy.toolchain.cmake:418 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:54 (include)
+  C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineSystem.cmake:98 (include)
+  CMakeLists.txt
+
+
+CMake Warning at C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android-legacy.toolchain.cmake:418 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:54 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake:6 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+CMake Warning at C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android-legacy.toolchain.cmake:418 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:54 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake:6 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+CMake Warning at C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android-legacy.toolchain.cmake:418 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:54 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake:6 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+CMake Warning at C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android-legacy.toolchain.cmake:418 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:54 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake:6 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+CMake Warning at C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android-legacy.toolchain.cmake:418 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:54 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake:6 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+CMake Warning at C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android-legacy.toolchain.cmake:418 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:54 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake:6 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+CMake Warning at C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android-legacy.toolchain.cmake:418 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:54 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake:6 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+CMake Warning at C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android-legacy.toolchain.cmake:418 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:54 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake:6 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+CMake Warning at C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android-legacy.toolchain.cmake:418 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:54 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake:6 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+
+CMake Warning at C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android-legacy.toolchain.cmake:418 (message):
+  An old version of CMake is being used that cannot automatically detect
+  compiler attributes.  Compiler identification is being bypassed.  Some
+  values may be wrong or missing.  Update to CMake 3.19 or newer to use
+  CMake's built-in compiler identification.
+Call Stack (most recent call first):
+  C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/build/cmake/android.toolchain.cmake:54 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/3.6.0-rc2/CMakeSystem.cmake:6 (include)
+  C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+
+

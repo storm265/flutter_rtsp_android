@@ -1,0 +1,73 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android",
+      "sdkFolder": "C:\\Users\\Dwight_Schrute\\AppData\\Local\\Android\\Sdk",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\build\\intermediates",
+      "gradleModulePathName": ":",
+      "moduleRootFolder": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android",
+      "makeFile": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "compilerSettingsCacheFolder": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx",
+      "cxxFolder": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx",
+      "ndkFolder": "C:\\Users\\Dwight_Schrute\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653",
+      "ndkVersion": "25.2.9519653",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [
+      "-DANDROID_ARM_NEON\u003dTRUE",
+      "-DANDROID_STL\u003dc++_shared"
+    ],
+    "cFlagList": [],
+    "cppFlagsList": [
+      ""
+    ],
+    "variantName": "debug",
+    "soFolder": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\build\\intermediates\\cmake\\debug\\lib",
+    "objFolder": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\build\\intermediates\\cmake\\debug\\obj",
+    "jsonFolder": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cmake\\debug",
+    "gradleBuildOutputFolder": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cxx\\debug",
+    "isDebuggableEnabled": true,
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "ARM64_V8A"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "ARM64_V8A",
+  "abiPlatformVersion": 19,
+  "cxxBuildFolder": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cmake\\debug\\arm64-v8a",
+  "jsonFile": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cmake\\debug\\arm64-v8a\\android_gradle_build.json",
+  "gradleBuildOutputFolder": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cxx\\debug\\arm64-v8a",
+  "objFolder": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a",
+  "buildCommandFile": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cmake\\debug\\arm64-v8a\\build_command.txt",
+  "buildOutputFile": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cmake\\debug\\arm64-v8a\\build_output.txt",
+  "modelOutputFile": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cmake\\debug\\arm64-v8a\\build_model.json",
+  "cmake": {
+    "cmakeListsWrapperFile": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cxx\\debug\\arm64-v8a\\CMakeLists.txt",
+    "toolchainWrapperFile": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cxx\\debug\\arm64-v8a\\android_gradle_build.toolchain.cmake",
+    "buildGenerationStateFile": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cxx\\debug\\arm64-v8a\\build_generation_state.json",
+    "cacheKeyFile": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cxx\\debug\\arm64-v8a\\compiler_cache_key.json",
+    "compilerCacheUseFile": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cxx\\debug\\arm64-v8a\\compiler_cache_use.json",
+    "compilerCacheWriteFile": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cxx\\debug\\arm64-v8a\\compiler_cache_write.json",
+    "toolchainSettingsFromCacheFile": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cxx\\debug\\arm64-v8a\\compiler_settings_cache.cmake",
+    "cmakeWrappingBaseFolder": "."
+  },
+  "jsonGenerationLoggingRecordFile": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cmake\\debug\\arm64-v8a\\json_generation_record.json",
+  "compileCommandsJsonFile": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cmake\\debug\\arm64-v8a\\compile_commands.json"
+}

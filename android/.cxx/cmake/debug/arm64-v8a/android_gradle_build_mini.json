@@ -1,0 +1,41 @@
+{
+  "buildFiles": [
+    "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\Dwight_Schrute\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cmake\\debug\\arm64-v8a --target clean"
+  ],
+  "libraries": {
+    "avutil-lib-Debug-arm64-v8a": {
+      "artifactName": "avutil-lib",
+      "abi": "arm64-v8a",
+      "output": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\src\\main\\jniLibs\\arm64-v8a\\libavutil.so"
+    },
+    "avcodec-lib-Debug-arm64-v8a": {
+      "artifactName": "avcodec-lib",
+      "abi": "arm64-v8a",
+      "output": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\src\\main\\jniLibs\\arm64-v8a\\libavcodec.so"
+    },
+    "swscale-lib-Debug-arm64-v8a": {
+      "artifactName": "swscale-lib",
+      "abi": "arm64-v8a",
+      "output": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\src\\main\\jniLibs\\arm64-v8a\\libswscale.so"
+    },
+    "rtsp-Debug-arm64-v8a": {
+      "artifactName": "rtsp",
+      "buildCommand": "C:\\Users\\Dwight_Schrute\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cmake\\debug\\arm64-v8a --target rtsp",
+      "abi": "arm64-v8a",
+      "output": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\librtsp.so"
+    },
+    "swresample-lib-Debug-arm64-v8a": {
+      "artifactName": "swresample-lib",
+      "abi": "arm64-v8a",
+      "output": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\src\\main\\jniLibs\\arm64-v8a\\libswresample.so"
+    },
+    "avformat-lib-Debug-arm64-v8a": {
+      "artifactName": "avformat-lib",
+      "abi": "arm64-v8a",
+      "output": "C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\src\\main\\jniLibs\\arm64-v8a\\libavformat.so"
+    }
+  }
+}
