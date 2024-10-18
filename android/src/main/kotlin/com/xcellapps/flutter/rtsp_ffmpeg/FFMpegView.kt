@@ -33,7 +33,7 @@ class FFMpegView internal constructor(context: Context?, messenger: BinaryMessen
             }
 
             override fun surfaceDestroyed(holder: SurfaceHolder) {
-             
+
             }
 
         })
