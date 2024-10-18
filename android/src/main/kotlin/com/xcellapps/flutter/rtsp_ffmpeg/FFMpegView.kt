@@ -21,7 +21,7 @@ class FFMpegView internal constructor(context: Context?, messenger: BinaryMessen
 
 
             override fun surfaceCreated(holder: SurfaceHolder) {
-                TODO("Not yet implemented")
+
             }
 
             override fun surfaceChanged(
@@ -33,7 +33,7 @@ class FFMpegView internal constructor(context: Context?, messenger: BinaryMessen
             }
 
             override fun surfaceDestroyed(holder: SurfaceHolder) {
-                TODO("Not yet implemented")
+             
             }
 
         })
