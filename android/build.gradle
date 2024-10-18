@@ -25,30 +25,30 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 25
-
+    compileSdk 31
+    namespace "com.xcellapps.flutter.rtsp_ffmpeg"
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
-    // compileOptions {
-    //     sourceCompatibility = JavaVersion.VERSION_1_8
-    //     targetCompatibility = JavaVersion.VERSION_1_8
-    // }
-
-    // kotlinOptions {
-    //     jvmTarget = JavaVersion.VERSION_1_8
-    // }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
-        jvmTarget = '17'
+        jvmTarget = JavaVersion.VERSION_1_8
     }
+    // compileOptions {
+    //     sourceCompatibility JavaVersion.VERSION_17
+    //     targetCompatibility JavaVersion.VERSION_17
+    // }
+    // kotlinOptions {
+    //     jvmTarget = '17'
+    // }
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 25
 
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
