@@ -20,7 +20,6 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-     
         body: GestureDetector(
           child: RtspFFMpeg(
             createdCallback: (controller) async {
@@ -29,7 +28,7 @@ class _MyAppState extends State<MyApp> {
                   (timer) =>
                       print("Stream is alive: ${controller.isStreamAlive}"));
 
-              final rtsp = 'rtsp://192.168.65.122:8554/operator/h264/1080p';
+              final rtsp = 'rtsp://192.168.65.122:8554/operator/h264/720p';
               await controller.play(rtsp);
               controller.streamAliveWatcher.listen((bool alive) async {
                 if (alive) {
