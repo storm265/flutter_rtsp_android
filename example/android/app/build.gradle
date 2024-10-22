@@ -24,8 +24,8 @@ if (flutterVersionName == null) {
 
 android {
     namespace "com.xcellapps.flutter.rtsp_ffmpeg"
-    compileSdk 31
-    ndkVersion flutter.ndkVersion
+    compileSdk 34
+    ndkVersion = "25.1.8937393"
 
 
 //    compileOptions {
