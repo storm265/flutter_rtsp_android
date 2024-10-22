@@ -1,0 +1,5 @@
+# ninja log v5
+1	1195	750938241	CMakeFiles/rtsp.dir/src/main/cpp/native-lib.cpp.o	722171385799d723
+1197	1291	750938241	C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/example/build/rtsp_ffmpeg/intermediates/cxx/RelWithDebInfo/5o2m3m5x/obj/arm64-v8a/librtsp.so	cabdb9a049557981
+7	441	750938357	C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/example/build/rtsp_ffmpeg/intermediates/cxx/RelWithDebInfo/5o2m3m5x/obj/arm64-v8a/librtsp.so	cabdb9a049557981
+2	55	750938490	C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/example/build/rtsp_ffmpeg/intermediates/cxx/RelWithDebInfo/5o2m3m5x/obj/arm64-v8a/librtsp.so	cabdb9a049557981

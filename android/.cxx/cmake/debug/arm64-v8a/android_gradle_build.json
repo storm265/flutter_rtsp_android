@@ -1,0 +1,81 @@
+
+{
+	"buildFiles" : 
+	[
+		"C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/CMakeLists.txt"
+	],
+	"cleanCommands" : 
+	[
+		"C:\\Users\\Dwight_Schrute\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cmake\\debug\\arm64-v8a --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"avcodec-lib-Debug-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "avcodec-lib",
+			"buildType" : "debug",
+			"output" : "C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/src/main/jniLibs/arm64-v8a/libavcodec.so",
+			"toolchain" : "2679562383"
+		},
+		"avformat-lib-Debug-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "avformat-lib",
+			"buildType" : "debug",
+			"output" : "C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/src/main/jniLibs/arm64-v8a/libavformat.so",
+			"toolchain" : "2679562383"
+		},
+		"avutil-lib-Debug-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "avutil-lib",
+			"buildType" : "debug",
+			"output" : "C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/src/main/jniLibs/arm64-v8a/libavutil.so",
+			"toolchain" : "2679562383"
+		},
+		"rtsp-Debug-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "rtsp",
+			"buildCommand" : "C:\\Users\\Dwight_Schrute\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Dwight_Schrute\\Desktop\\flutter_rtsp_android\\android\\.cxx\\cmake\\debug\\arm64-v8a --target rtsp",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=aarch64-none-linux-android21 --sysroot=C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Drtsp_EXPORTS -I..\\..\\..\\..\\src\\main\\cpp\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/.cxx/cmake/debug/arm64-v8a"
+				}
+			],
+			"output" : "C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/build/intermediates/cmake/debug/obj/arm64-v8a/librtsp.so",
+			"toolchain" : "2679562383"
+		},
+		"swresample-lib-Debug-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "swresample-lib",
+			"buildType" : "debug",
+			"output" : "C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/src/main/jniLibs/arm64-v8a/libswresample.so",
+			"toolchain" : "2679562383"
+		},
+		"swscale-lib-Debug-arm64-v8a" : 
+		{
+			"abi" : "arm64-v8a",
+			"artifactName" : "swscale-lib",
+			"buildType" : "debug",
+			"output" : "C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/android/src/main/jniLibs/arm64-v8a/libswscale.so",
+			"toolchain" : "2679562383"
+		}
+	},
+	"toolchains" : 
+	{
+		"2679562383" : 
+		{
+			"cCompilerExecutable" : "C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "C:/Users/Dwight_Schrute/AppData/Local/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+		}
+	}
+}

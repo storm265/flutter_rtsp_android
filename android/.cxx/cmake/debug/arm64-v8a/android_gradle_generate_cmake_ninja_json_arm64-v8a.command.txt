@@ -1,0 +1,17 @@
+Executable : C:\Users\Dwight_Schrute\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\cmake.exe
+arguments : 
+-HC:\Users\Dwight_Schrute\Desktop\flutter_rtsp_android\android
+-BC:\Users\Dwight_Schrute\Desktop\flutter_rtsp_android\android\.cxx\cmake\debug\arm64-v8a
+-DANDROID_ABI=arm64-v8a
+-DANDROID_PLATFORM=android-19
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\Dwight_Schrute\Desktop\flutter_rtsp_android\android\build\intermediates\cmake\debug\obj\arm64-v8a
+-DCMAKE_BUILD_TYPE=Debug
+-DANDROID_NDK=C:\Users\Dwight_Schrute\AppData\Local\Android\Sdk\ndk\25.2.9519653
+-DCMAKE_CXX_FLAGS=
+-DCMAKE_TOOLCHAIN_FILE=C:\Users\Dwight_Schrute\AppData\Local\Android\Sdk\ndk\25.2.9519653\build\cmake\android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=C:\Users\Dwight_Schrute\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\ninja.exe
+-GAndroid Gradle - Ninja
+-DANDROID_ARM_NEON=TRUE
+-DANDROID_STL=c++_shared
+jvmArgs : 
+
