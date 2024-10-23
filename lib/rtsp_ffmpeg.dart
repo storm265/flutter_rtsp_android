@@ -1,72 +1,49 @@
 import 'dart:async';
-import 'dart:developer';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 final rtspController = RtspController(0);
 
-final class RtspController {
-  static const watchdogPeriod = Duration(milliseconds: 100);
-  static const nativeCallTimeout = Duration(milliseconds: 500);
+Stream videoAliveWatcherStream = Stream<bool>.periodic(
+  Duration(milliseconds: 500),
+  (computationCount) {
+    debugPrint('is alive ${rtspController.isVideoAlive}');
+    return rtspController.isVideoAlive;
+  },
+);
 
+final class RtspController {
   RtspController(int id) {
     _channel = MethodChannel('rtsp_ffmpeg$id');
+
+    try {
+      EventChannel('channel').receiveBroadcastStream().listen(
+        (event) async {
+          bool data = event as bool;
+
+          isVideoAlive = data;
+
+          if (!data) {
+            debugPrint('restarting video');
+            await stop();
+            await play(rtsp);
+          }
+        },
+      );
+    } catch (e) {
+      debugPrint('could listen stream alive channel');
+    }
   }
+  final rtsp = 'rtsp://192.168.65.122:8554/operator/h264/720p';
 
   late MethodChannel _channel;
 
-  StreamController<bool> _streamAliveController = StreamController<bool>();
+  late bool isVideoAlive;
 
-  Stream<bool> get streamAliveWatcher => _streamAliveController.stream;
+  Future<void> play(String url) => _channel.invokeMethod('play', url);
 
-  bool _isStreamAlive = false;
-  bool _started = false;
-
-  late Future<void> _watchdog = Future.value();
-
-  Future<bool> play(String url) async {
-    var success = true;
-    _setStreamAlive(true);
-    _started = false;
-    final playFuture = _channel.invokeMethod('play', url);
-
-    _watchdog.ignore();
-    _watchdog = Future.doWhile(() async {
-      if (!_started) {
-        await Future.delayed(const Duration(seconds: 1));
-        _started = true;
-      } else {
-        await Future.delayed(watchdogPeriod);
-      }
-      return await _channel.invokeMethod<bool>('isStreamAlive') ?? false;
-    }).whenComplete(() => _setStreamAlive(false));
-
-    await playFuture.timeout(nativeCallTimeout,
-        onTimeout: () => success = false);
-
-    return success;
-  }
-
-  Future<bool> stop() async {
-    var success = true;
-    await _channel
-        .invokeMethod('stop')
-        .timeout(nativeCallTimeout, onTimeout: () => success = false);
-    return success;
-  }
-
-  void _setStreamAlive(bool newStatus) {
-    if (_isStreamAlive == newStatus) {
-      return;
-    }
-
-    _isStreamAlive = newStatus;
-    _streamAliveController.add(_isStreamAlive);
-  }
-
-  bool get isStreamAlive => _isStreamAlive;
+  Future<void> stop() => _channel.invokeMethod('stop');
 }
 
 typedef RtspFFMpegCreatedCallback = void Function(RtspController controller);
@@ -94,7 +71,6 @@ class _RtspFFMpegState extends State<RtspFFMpeg> {
   }
 
   void _onPlatformViewCreated(int id) {
-    log('id ${id}');
     widget.createdCallback(rtspController);
   }
 }

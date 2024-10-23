@@ -1,3 +1,6 @@
 # ninja log v5
 1	1095	751286304	CMakeFiles/rtsp.dir/src/main/cpp/native-lib.cpp.o	419fcc81f7a65053
 1096	1195	751286305	C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/example/build/rtsp_ffmpeg/intermediates/cxx/RelWithDebInfo/2h5k2z3k/obj/armeabi-v7a/librtsp.so	e807300828d61b92
+1	62	751387851	build.ninja	6536055a3f895630
+2	509	751387851	CMakeFiles/rtsp.dir/src/main/cpp/native-lib.cpp.o	419fcc81f7a65053
+509	594	751387851	C:/Users/Dwight_Schrute/Desktop/flutter_rtsp_android/example/build/rtsp_ffmpeg/intermediates/cxx/RelWithDebInfo/2h5k2z3k/obj/armeabi-v7a/librtsp.so	e807300828d61b92
