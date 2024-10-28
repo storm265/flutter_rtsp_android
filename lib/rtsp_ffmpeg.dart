@@ -5,10 +5,10 @@ import 'package:flutter/services.dart';
 
 final rtspController = RtspController(0);
 
-Stream videoAliveWatcherStream = Stream<bool>.periodic(
+Stream<bool> videoAliveWatcherStream = Stream<bool>.periodic(
   Duration(milliseconds: 500),
   (computationCount) {
-    debugPrint('is alive ${rtspController.isVideoAlive}');
+    debugPrint('is alive video: ${rtspController.isVideoAlive}');
     return rtspController.isVideoAlive;
   },
 );
