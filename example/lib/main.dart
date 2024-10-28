@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:rtsp_ffmpeg/rtsp_ffmpeg.dart';
 
@@ -37,7 +35,7 @@ class _RtspVideoWidgetState extends State<RtspVideoWidget> {
       children: [
         RtspFFMpeg(
           createdCallback: (_) async {
-            await rtspController.play(rtspController.rtsp);
+            await rtspController.play(rtspUrl);
           },
         ),
         StreamBuilder(

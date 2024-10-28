@@ -3,7 +3,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-final rtspController = RtspController(0);
+String rtspUrl = 'rtsp://192.168.65.122:8554/operator/h264/720p';
+final rtspController = RtspController(
+  id: 0,
+  rtspUrl: rtspUrl,
+);
 
 Stream<bool> videoAliveWatcherStream = Stream<bool>.periodic(
   Duration(milliseconds: 500),
@@ -14,7 +18,7 @@ Stream<bool> videoAliveWatcherStream = Stream<bool>.periodic(
 );
 
 final class RtspController {
-  RtspController(int id) {
+  RtspController({int id = 0, required String rtspUrl}) {
     _channel = MethodChannel('rtsp_ffmpeg$id');
 
     try {
@@ -27,7 +31,7 @@ final class RtspController {
           if (!data) {
             debugPrint('restarting video');
             await stop();
-            await play(rtsp);
+            await play(rtspUrl);
           }
         },
       );
@@ -35,7 +39,6 @@ final class RtspController {
       debugPrint('could listen stream alive channel');
     }
   }
-  final rtsp = 'rtsp://192.168.65.122:8554/operator/h264/720p';
 
   late MethodChannel _channel;
 
@@ -44,6 +47,11 @@ final class RtspController {
   Future<void> play(String url) => _channel.invokeMethod('play', url);
 
   Future<void> stop() => _channel.invokeMethod('stop');
+
+  Future<void> restartVideo() async {
+    await stop();
+    await play(rtspUrl);
+  }
 }
 
 typedef RtspFFMpegCreatedCallback = void Function(RtspController controller);
@@ -51,7 +59,10 @@ typedef RtspFFMpegCreatedCallback = void Function(RtspController controller);
 class RtspFFMpeg extends StatefulWidget {
   final RtspFFMpegCreatedCallback createdCallback;
 
-  const RtspFFMpeg({super.key, required this.createdCallback});
+  const RtspFFMpeg({
+    super.key,
+    required this.createdCallback,
+  });
 
   @override
   _RtspFFMpegState createState() => _RtspFFMpegState();
