@@ -236,7 +236,11 @@ void *playBackThread(RtspStreamContext play_context) {
 }
 
 static void stopThread() {
+    __android_log_print(ANDROID_LOG_INFO, TAG, "Into stopThread");
     isStop = true;
+    if (activeThread == nullptr) {
+        __android_log_print(ANDROID_LOG_INFO, TAG, "stopThread: activeThread is nullptr");
+    }
     if (activeThread != nullptr) {
         if (successStop.waitOne(std::chrono::milliseconds{100}) == std::cv_status::timeout) {
             __android_log_print(ANDROID_LOG_ERROR, TAG,
