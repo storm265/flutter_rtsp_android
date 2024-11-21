@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/ladmin/Desktop/flutter_rtsp_android/android/.cxx/Debug/3sb84l26/armeabi-v7a",
+  "command": "/Users/ladmin/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi24 --sysroot=/Users/ladmin/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Drtsp_EXPORTS -I../../../../src/main/cpp/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles/rtsp.dir/src/main/cpp/native-lib.cpp.o -c /Users/ladmin/Desktop/flutter_rtsp_android/android/src/main/cpp/native-lib.cpp",
+  "file": "/Users/ladmin/Desktop/flutter_rtsp_android/android/src/main/cpp/native-lib.cpp"
+}
+]
