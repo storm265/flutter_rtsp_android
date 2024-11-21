@@ -46,6 +46,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body: RtspFFMpeg(
           createdCallback: (controller) async {
+            rtspController = controller;
             Timer.periodic(
               const Duration(milliseconds: 100),
               (timer) => print(
